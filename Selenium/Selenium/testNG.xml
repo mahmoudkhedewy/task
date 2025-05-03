@@ -1,0 +1,66 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite" thread-count="2" parallel="tests">
+
+    <test name="Regression Test in chrome">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="tests.AddToCart">
+                <methods>
+                    <include name="TestLoginFunction" />
+                    <include name="TestAddToCart" />
+                    <include name="AssertThatTowProductsAreInThCart"/>
+                </methods>
+            </class>
+            <class name="tests.CheckoutTest">
+                <methods>
+                    <include name="TestLoginFunction" />
+                    <include name="TestAddToCart" />
+                    <include name="AssertThatTowProductsAreInThCart"/>
+                    <include name="navigateToCheckoutPage"/>
+                    <include name="completeCheckout"/>
+                </methods>
+            </class>
+            <class name="tests.InvalidLogin">
+                <methods>
+                    <include name="TestLoginFunction" />
+                </methods>
+            </class>
+            <class name="tests.LoginWithValidCredintials">
+                <methods>
+                    <include name="TestLoginFunction" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Regression Test in firefox">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="tests.AddToCart">
+                <methods>
+                    <include name="TestLoginFunction" />
+                    <include name="TestAddToCart" />
+                    <include name="AssertThatTowProductsAreInThCart"/>
+                </methods>
+            </class>
+            <class name="tests.CheckoutTest">
+                <methods>
+                    <include name="TestLoginFunction" />
+                    <include name="TestAddToCart" />
+                    <include name="AssertThatTowProductsAreInThCart"/>
+                    <include name="navigateToCheckoutPage"/>
+                    <include name="completeCheckout"/>
+                </methods>
+            </class>
+            <class name="tests.InvalidLogin">
+                <methods>
+                    <include name="TestLoginFunction" />
+                </methods>
+            </class>
+            <class name="tests.LoginWithValidCredintials">
+                <methods>
+                    <include name="TestLoginFunction" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

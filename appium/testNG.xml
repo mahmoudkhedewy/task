@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <test name="test in android device">
+        <classes>
+            <class name="tests.AddToCartScreenTest">
+                <methods>
+                    <include name="addProductToCart"/>
+                </methods>
+            </class>
+            <class name="tests.CheckoutScreenTest">
+                <methods>
+                    <include name="navigateToRegisterPage"/>
+                    <include name="enterRegisterData"/>
+                    <include name="addProductToCart"/>
+                    <include name="navigateToCartDetails"/>
+                    <include name="navigateToCheckoutScreen"/>
+                    <include name="completeCheckout"/>
+                    <include name="completePayment"/>
+                </methods>
+            </class>
+            <class name="tests.LoginScreenTest">
+                <methods>
+                    <include name="navigateToRegisterPage"/>
+                    <include name="enterRegisterData"/>
+                </methods>
+            </class>
+            <class name="tests.UpdateCartScreenTest">
+                <methods>
+                    <include name="addProductToCart"/>
+                    <include name="addOneMoreProduct"/>
+                    <include name="removeItems"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
